@@ -8,15 +8,27 @@
   font-family: "Rubik", sans-serif;
 }
 body {
-  background-color: #222;
+  background: rgb(0,24,108);
+  background: linear-gradient(168deg, rgba(0,24,108,1) 0%, rgba(78,195,255,1) 100%);
 }
 .container {
   padding: 0px 20px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
 }
 .container .card {
+  position: absolute;
   padding: 40px 35px;
-  margin: 100px auto 0;
-  background: linear-gradient(135deg, #00feba, #5b548a);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background: rgb(0,24,108);
+  background: linear-gradient(168deg, rgba(0,24,108,1) 0%, rgba(78,195,255,1) 100%);
   width: 90%;
   max-width: 490px;
   color: white;
