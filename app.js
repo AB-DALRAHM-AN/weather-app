@@ -53,7 +53,7 @@ const weatherIcons = {
   "volcanic ash": "fa-smog",
   "squalls": "fa-smog",
   "tornado": "fa-smog",
-  "clear sky": "fa-sun",
+  "clear sky": "fa-cloud",
   "few clouds": "fa-cloud-sun",
   "scattered clouds": "fa-cloud",
   "broken clouds": "fa-cloud",
@@ -105,16 +105,11 @@ function isDaytimeNow(localTime) {
 }
 
 function addContent(temp, city, humidity, windSpeed, status, isDaytime) {
-  if (status === "clear sky" && !isDaytime) {
-    weatherS.className = `fa-solid fa-moon`;
-  } else if (status === "clear sky" && isDaytime) {
-    weatherS.className = `fa-solid fa-sun`;
-  } else if (weatherIcons.hasOwnProperty(status)) {
-    const iconClass = weatherIcons[status];
-    weatherS.className = `fa-solid ${iconClass}`;
-  } else {
-    weatherS.className = `fa fa-question`;
+  let iconClass = weatherIcons[status];
+  if (!iconClass) {
+    iconClass = "fa-question";
   }
+  weatherS.className = `fas ${iconClass}`;
   degree.innerHTML = `${temp}°C`;
   name.innerHTML = `${city}`;
   humidityD.innerHTML = `${humidity}%`;
