@@ -106,17 +106,13 @@ function isDaytimeNow(localTime) {
 
 function addContent(temp, city, humidity, windSpeed, status, isDaytime) {
   if (status === "clear sky" && !isDaytime) {
-    weatherS.className = "";
     weatherS.classList.add("fa-solid", "fa-moon");
   } else if (status === "clear sky" && isDaytime) {
-    weatherS.className = "";
     weatherS.classList.add("fa-solid", "fa-sun");
   } else if (weatherIcons.hasOwnProperty(status)) {
     const iconClass = weatherIcons[status];
-    weatherS.className = "";
     weatherS.classList.add("fa-solid", iconClass);
   } else {
-    weatherS.className = "";
     weatherS.classList.add("fa", "fa-question");
   }
   degree.innerHTML = `${temp}°C`;
