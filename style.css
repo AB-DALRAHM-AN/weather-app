@@ -84,7 +84,7 @@ body {
   flex-direction: column;
   margin-top: 40px;
 }
-.body .status i {
+.body .status {
   font-size: 120px;
 }
 .body .degree {
