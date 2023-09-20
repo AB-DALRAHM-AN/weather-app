@@ -84,7 +84,7 @@ body {
   flex-direction: column;
   margin-top: 40px;
 }
-.body .status {
+.body .status i {
   font-size: 120px;
 }
 .body .degree {
@@ -107,17 +107,10 @@ body {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-}
-.footer div i {
+  gap: 10px; 
   font-size: 30px;
-  margin-right: 10px;
 }
-.footer div div {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-}
-.footer div div span {
+.footer div span {
   font-size: 20px;
 }
 
@@ -135,10 +128,10 @@ body {
   .body .city {
     font-size: 25px;
   }
-  .footer div i {
+  .footer div {
     font-size: 25px;
   }
-  .footer div div span {
+  .footer div span {
     font-size: 18px;
   }
 }
@@ -155,10 +148,10 @@ body {
   .body .city {
     font-size: 20px;
   }
-  .footer div i {
+  .footer div {
     font-size: 20px;
   }
-  .footer div div span {
+  .footer div span {
     font-size: 15px;
   }
 }
@@ -167,7 +160,7 @@ body {
     flex-direction: column;
     text-align: center;
   }
-  .footer div i {
+  .footer div {
     margin-bottom: 10px;
   }
 }
