@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "ADLaM Display", cursive;
+  font-family: "Mooli", sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-family: "Rubik", sans-serif;
+}
+body {
+  background-color: #222;
+}
+.container {
+  padding: 0px 20px;
+}
+.container .card {
+  padding: 40px 35px;
+  margin: 100px auto 0;
+  background: linear-gradient(135deg, #00feba, #5b548a);
+  width: 90%;
+  max-width: 490px;
+  color: white;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+.card .search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.search input {
+  padding: 15px;
+  border-radius: 18px;
+  width: 100%;
+  border: none;
+  outline: none;
+  margin-right: 8px;
+  -webkit-border-radius: 18px;
+  -moz-border-radius: 18px;
+  -ms-border-radius: 18px;
+  -o-border-radius: 18px;
+}
+.search input::placeholder {
+  color: #008965;
+  font-size: 15px;
+}
+.search button {
+  width: 45px;
+  height: 40px;
+  border-radius: 50%;
+  outline: none;
+  border: none;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.search button i {
+  font-size: 17px;
+  color: #008965;
+}
+
+/* start card-body */
+.card .body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 40px;
+}
+.body .status {
+  font-size: 120px;
+}
+.body .degree {
+  font-size: 60px;
+}
+.body .city {
+  font-size: 30px;
+}
+
+/* start footer */
+.card .footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 40px 0 0;
+}
+.footer div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer div i {
+  font-size: 30px;
+  margin-right: 10px;
+}
+.footer div div {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin-top: 20px;
+}
+.footer div div span {
+  font-size: 20px;
+}
+
+/* media */
