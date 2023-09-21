@@ -1,0 +1,18 @@
+{
+  "Rain": "fa-solid fa-cloud-rain",
+  "Clouds": "fa-solid fa-cloud",
+  "Snow": "fa-solid fa-snowflake",
+  "Sun": "fa-solid fa-sun",
+  "Clear": "fa-solid fa-cloud-sun",
+  "Thunderstorm": "fa-solid fa-thunderstorm",
+  "Drizzle": "fa-solid fa-cloud-drizzle",
+  "Mist": "fa-solid fa-smog",
+  "Smoke": "fa-solid fa-smog",
+  "Haze": "fa-solid fa-smog",
+  "Dust": "fa-solid fa-smog",
+  "Fog": "fa-solid fa-fog",
+  "Sand": "fa-solid fa-smog",
+  "Ash": "fa-solid fa-smog",
+  "Squall": "fa-solid fa-wind",
+  "Tornado": "fa-solid fa-wind"
+}
