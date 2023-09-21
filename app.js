@@ -12,7 +12,6 @@ fetch("status.json")
   .then((response) => response.json())
   .then((data) => {
     const dataWeather = data;
-    console.log(dataWeather);
 
     button.addEventListener("click", () => {
       let inputValue = `${input.value}`;
@@ -29,8 +28,6 @@ fetch("status.json")
           .then((full) => {
             let temp = full.main.temp;
             let status = full.weather[0].main;
-            console.log(status);
-            console.log(typeof status);
             let city = full.name;
             let humidity = full.main.humidity;
             let windSpeed = full.wind.speed;
@@ -44,7 +41,6 @@ fetch("status.json")
 
     function addContent(temp, city, humidity, windSpeed, status, dataWeather) {
       let iconClass = dataWeather[status];
-      console.log(iconClass);
       if (iconClass === undefined) {
         iconClass = "fa-solid fa-cloud";
       }
