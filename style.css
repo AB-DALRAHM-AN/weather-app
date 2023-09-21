@@ -2,12 +2,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "ADLaM Display", cursive;
-  font-family: "Mooli", sans-serif;
-  font-family: "Poppins", sans-serif;
-  font-family: "Rubik", sans-serif;
 }
 body {
+  font-family: "Poppins", sans-serif;
   background: rgb(0,24,108);
   background: linear-gradient(168deg, rgba(0,24,108,1) 0%, rgba(78,195,255,1) 100%);
 }
