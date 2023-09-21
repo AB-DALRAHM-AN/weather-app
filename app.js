@@ -54,11 +54,13 @@ button.addEventListener("click", () => {
 });
 
 function addContent(temp, city, humidity, windSpeed, status) {
-  let iconClass;
-  iconClass = `${weatherIcons[status]}`;
-  if (iconClass == undefined) {
-    iconClass = "fa-solid fa-cloud";
-  }
+  let status = full.weather[0].main.toLowerCase();
+// Use the lowercase condition to find the corresponding icon
+let iconClass = weatherIcons[status];
+// Default to a generic icon if the condition is not found
+if (iconClass === undefined) {
+  iconClass = "fa-solid fa-cloud";
+}
   weatherS.className = `${iconClass}`;
   degree.innerHTML = `${Math.round(temp)}°C`
   name.innerHTML = city;
