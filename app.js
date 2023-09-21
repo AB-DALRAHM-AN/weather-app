@@ -9,21 +9,21 @@ let humidityD = document.querySelector(".humidity span .humidityD");
 let windS = document.querySelector(".wind span .windS");
 
 const weatherIcons = {
-  "Clouds": "fa-cloud",
-  "Clear": "fa-cloud-sun",
-  "Rain": "fa-cloud-rain",
-  "Snow": "fa-snowflake",
-  "Mist": "fa-smog",
-  "Drizzle": "fa-cloud-rain",
-  "Thunderstorm": "fa-bolt",
-  "Haze": "fa-smog",
-  "Fog": "fa-smog",
-  "Smoke": "fa-smog",
-  "Dust": "fa-smog",
-  "Sand": "fa-smog",
-  "Ash": "fa-smog",
-  "Squall": "fa-smog",
-  "Tornado": "fa-smog",
+  "Clouds": "fa-solid fa-cloud",
+  "Clear": "fa-solid fa-sun",
+  "Rain": "fa-solid fa-cloud-rain",
+  "Snow": "fa-solid fa-snowflake",
+  "Mist": "fa-solid fa-smog",
+  "Thunderstorm": "fa-solid fa-bolt",
+  "Drizzle": "fa-solid fa-cloud-rain",
+  "Haze": "fa-solid fa-smog",
+  "Smoke": "fa-solid fa-smog",
+  "Dust": "fa-solid fa-smog",
+  "Fog": "fa-solid fa-smog",
+  "Sand": "fa-solid fa-smog",
+  "Ash": "fa-solid fa-smog",
+  "Squall": "fa-solid fa-smog",
+  "Tornado": "fa-solid fa-smog",
 };
 
 button.addEventListener("click", () => {
@@ -64,7 +64,7 @@ function addContent(temp, city, humidity, windSpeed, status, isDaytime) {
   if (!iconClass) {
     iconClass = "fa-question";
   }
-  weatherS.className = `fa-solid ${iconClass}`;
+  weatherS.className = `${iconClass}`;
   degree.innerHTML = `${temp}°C`;
   name.innerHTML = `${city}`;
   humidityD.innerHTML = `${humidity}%`;
