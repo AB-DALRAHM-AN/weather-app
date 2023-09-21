@@ -10,7 +10,7 @@ let windS = document.querySelector(".wind span .windS");
 
 const weatherIcons = {
   "Clouds": "fa-cloud",
-  "Clear": "fa-cloud-sun",
+  "Clear": "fa-rainbow",
   "Rain": "fa-cloud-rain",
   "Snow": "fa-snowflake",
   "Mist": "fa-smog",
