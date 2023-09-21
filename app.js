@@ -8,11 +8,24 @@ let cityName = document.querySelector(".body .city");
 let humidityD = document.querySelector(".humidity span .humidityD");
 let windS = document.querySelector(".wind span .windS");
 
-fetch("status.json")
-  .then((response) => response.json())
-  .then((data) => {
-    const dataWeather = data;
-    console.log(dataWeather);
+const weatherIcons = {
+  ["Rain"]: "fa-solid fa-cloud-rain",
+  ["Clouds"]: "fa-solid fa-cloud",
+  ["Snow"]: "fa-solid fa-snowflake",
+  ['sun']: "fa-solid fa-sun",
+  ["Clear"]: "fa-solid fa-cloud-sun",
+  ["Thunderstorm"]: "fa-solid fa-thunderstorm",
+  ["Drizzle"]: "fa-solid fa-cloud-drizzle",
+  ["Mist"]: "fa-solid fa-smog",
+  ["Smoke"]: "fa-solid fa-smog",
+  ["Haze"]: "fa-solid fa-smog",
+  ["Dust"]: "fa-solid fa-smog",
+  ["Fog"]: "fa-solid fa-fog",
+  ["Sand"]: "fa-solid fa-smog",
+  ["Ash"]: "fa-solid fa-smog",
+  ["Squall"]: "fa-solid fa-wind",
+  ["Tornado"]: "fa-solid fa-wind",
+};
 
     button.addEventListener("click", () => {
       let inputValue = `${input.value}`;
@@ -42,16 +55,15 @@ fetch("status.json")
       }
     });
 
-    function addContent(temp, city, humidity, windSpeed, status, dataWeather) {
-      let iconClass = dataWeather[status];
-      console.log(iconClass);
-      if (iconClass === undefined) {
-        iconClass = "fa-solid fa-cloud";
-      }
-      weatherS.className = iconClass;
-      degree.innerHTML = `${Math.round(temp)}°C`;
-      cityName.innerHTML = city;
-      humidityD.innerHTML = humidity;
-      windS.innerHTML = windSpeed;
-    }
-  });
+function addContent(temp, city, humidity, windSpeed, status) {
+  let iconClass;
+  iconClass = `${weatherIcons[status]}`;
+  if (iconClass == undefined) {
+    iconClass = "fa-solid fa-cloud";
+  }
+  weatherS.className = `${iconClass}`;
+  degree.innerHTML = `${Math.round(temp)}°C`
+  name.innerHTML = city;
+  humidityD.innerHTML = humidity;
+  windS.innerHTML = windSpeed;
+}
