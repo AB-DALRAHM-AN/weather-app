@@ -2,7 +2,7 @@ let apiKey = "8c8e0314838ac666855528f1b7b17b15";
 let apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric";
 let input = document.querySelector(".search input");
 let button = document.querySelector(".search button");
-let weatherS = document.querySelector(".body .status i");
+let weatherS = document.querySelector(".body .status");
 let degree = document.querySelector(".body .degree");
 let cityName = document.querySelector(".body .city");
 let humidityD = document.querySelector(".humidity span .humidityD");
@@ -44,7 +44,11 @@ fetch("status.json")
       if (iconClass === undefined) {
         iconClass = "fa-solid fa-cloud";
       }
-      weatherS.className = iconClass;
+      weatherS.innerHTML = "";
+      document.createElement("i");
+      let icon = document.createElement("i");
+      icon.classList = iconClass;
+      weatherS.appendChild(icon);
       degree.innerHTML = `${Math.round(temp)}°C`;
       cityName.innerHTML = city;
       humidityD.innerHTML = humidity;
