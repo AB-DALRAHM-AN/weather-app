@@ -9,9 +9,9 @@ let humidityD = document.querySelector(".humidity span .humidityD");
 let windS = document.querySelector(".wind span .windS");
 
 const weatherIcons = {
-  ["Rain"]: ["fa-solid fa-cloud-rain"],
-  ["Clouds"]: ["fa-solid fa-cloud"],
-  ["Snow"]: ["fa-solid fa-snowflake"],
+  ["Rain"]: "fa-solid fa-cloud-rain",
+  ["Clouds"]: "fa-solid fa-cloud",
+  ["Snow"]: "fa-solid fa-snowflake",
   ['sun']: "fa-solid fa-sun",
   ["Clear"]: "fa-solid fa-cloud-sun",
   ["Thunderstorm"]: "fa-solid fa-thunderstorm",
