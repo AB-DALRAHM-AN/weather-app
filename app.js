@@ -12,7 +12,7 @@ const weatherIcons = {
   ["Rain"]: "fa-solid fa-cloud-rain",
   ["Clouds"]: "fa-solid fa-cloud",
   ["Snow"]: "fa-solid fa-snowflake",
-  ['sun']: "fa-solid fa-sun",
+  ['Sun']: "fa-solid fa-sun",
   ["Clear"]: "fa-solid fa-cloud-sun",
   ["Thunderstorm"]: "fa-solid fa-thunderstorm",
   ["Drizzle"]: "fa-solid fa-cloud-drizzle",
@@ -54,10 +54,7 @@ button.addEventListener("click", () => {
 });
 
 function addContent(temp, city, humidity, windSpeed, status) {
-  let status = full.weather[0].main.toLowerCase();
-// Use the lowercase condition to find the corresponding icon
 let iconClass = weatherIcons[status];
-// Default to a generic icon if the condition is not found
 if (iconClass === undefined) {
   iconClass = "fa-solid fa-cloud";
 }
