@@ -64,9 +64,11 @@ function addContent(temp, city, humidity, windSpeed, status, isDaytime) {
   if (!iconClass) {
     iconClass = "fa-question";
   }
-  weatherS.className = `fa-solid ${iconClass}`;
-  degree.innerHTML = `${temp}°C`;
-  name.innerHTML = `${city}`;
+  weatherS.className = `fas ${iconClass}`;
+  degree.innerHTML = `${Math.round(temp)}°C`;
+  name.innerHTML = city;
   humidityD.innerHTML = `${humidity}%`;
   windS.innerHTML = `${windSpeed}km/h`;
+  document.body.className = isDaytime ? "day" : "night";
+  input.value = "";
 };
