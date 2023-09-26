@@ -12,7 +12,6 @@ fetch("status.json")
   .then((response) => response.json())
   .then((data) => {
     const dataWeather = data;
-
     button.addEventListener("click", () => {
       let inputValue = `${input.value}`;
       if (inputValue == "") {
